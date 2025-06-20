@@ -395,3 +395,23 @@
 
         // Jalankan saat DOM siap
         document.addEventListener('DOMContentLoaded', initApp);
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const toggleDark = document.getElementById('toggleDarkMode');
+        const root = document.documentElement;
+
+        // Simpan preferensi pengguna di localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            root.classList.add('dark');
+        }
+
+        toggleDark.addEventListener('click', () => {
+            root.classList.toggle('dark');
+            const mode = root.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', mode);
+        });
+    });
+
+        tailwind.config = {
+        darkMode: 'class',
+    }

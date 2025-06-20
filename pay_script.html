@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Pembayaran Lengkap</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-red-800 to-orange-700 min-h-screen py-8">
+<body class="min-h-screen py-8 bg-gradient-to-br from-red-800 to-orange-700 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800">
     <div class="container mx-auto max-w-5xl px-4">
     <!-- Header -->
         <div class="text-center mb-10">
@@ -27,6 +27,18 @@
             </div>
 
             <p class="text-base text-purple-100 italic">Nikmati berbagai paket ayam dengan transaksi yang lancar dan aman 🍗</p>
+        </div>
+        <div class="flex justify-end mb-4">
+            <button 
+            id="toggleDarkMode"
+            class="px-5 py-2.5 rounded-xl font-medium transition-all duration-300 ease-in-out 
+                bg-red-600 text-white 
+                hover:bg-red-700 
+                dark:bg-yellow-400 dark:text-gray-900 
+                dark:hover:bg-yellow-300 
+                shadow-md dark:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 dark:focus:ring-yellow-500">
+            🌗 Toggle Dark Mode
+            </button>
         </div>
         <div class="grid lg:grid-cols-2 gap-8">
             <!-- Form Pembayaran -->
