@@ -315,10 +315,26 @@
         function clearAllHistory() {
             if (transactions.length === 0) return;
             
-            if (confirm('Apakah Anda yakin ingin menghapus semua riwayat transaksi?')) {
+            Swal.fire({
+            title: 'Yakin ingin hapus semua?',
+            text: 'Tindakan ini tidak bisa dikembalikan!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Ya, hapus semua!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
                 transactions = [];
                 renderTransactions();
+                Swal.fire(
+                    'Terhapus!',
+                    'Semua riwayat transaksi telah dihapus.',
+                    'success'
+                );
             }
+        });
         }
 
         // Reset form
