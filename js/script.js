@@ -4,6 +4,7 @@
         let currentDiscount = 0;
         let appliedPromoCode = '';
 
+        
         const promoCodes = {
           'SHOPEE1111': { discount: 5, type: 'percentage', description: 'Selamat anda mendapatkan sebesar Diskon 5%'},
           'SHOPEE1212': { discount: 10, type: 'percentage', description: 'Selamat anda mendapatkan sebesar Diskon 90%'},
@@ -13,7 +14,6 @@
           'LAZADA55': { discount: 10, type: 'percentage', description: 'Selamat anda mendapatkan sebesar Diskon 10%'},
           'KFCMURAH': { discount: 8, type: 'percentage', description: 'Selamat anda mendapatkan sebesar Diskon 8%'},
         };
-        
         // Mapping metode pembayaran dengan warna
         const paymentMethodColors = {
             'transfer': 'bg-blue-100 text-blue-800',
